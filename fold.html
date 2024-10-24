@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Recipe Application</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Above the Fold Section -->
+    <section id="home" class="above-fold">
+        <div class="container">
+            <h2>Welcome to Recipe Application</h2>
+            <p>Discover delicious recipes, share your own, and enjoy cooking like never before!</p>
+        </div>
+    </section>
+
+    <!-- Below the Fold Section -->
+    <main>
+        <section id="about" class="below-fold">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Our Recipe Application is designed to help you find and share recipes easily. Whether you're a seasoned chef or a beginner, you'll find something to inspire you here.</p>
+            </div>
+        </section>
+
+        <section id="recipes" class="below-fold">
+            <div class="container">
+                <h2>Our Recipes</h2>
+                <div class="recipe-list">
+                    <div class="recipe-item">
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
+                    </div>
+                    <div class="recipe-item">
+                        <h3>Chicken Tikka Masala</h3>
+                        <p>A flavorful Indian dish made with marinated chicken pieces cooked in a creamy tomato sauce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="below-fold">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Recipe Application. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

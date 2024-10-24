@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Recipe</title>
+</head>
+<body>
+    <h2>Add Recipe</h2>
+    <form action="add recipe.php" method="post" enctype="multipart/form-data">
+        <label for="recipe_name">Recipe Name:</label>
+        <input type="text" name="recipe_name" required><br>
+
+        <label for="image">Image:</label>
+        <input type="file" name="image"><br>
+
+        <label for="category_id">Food Category:</label>
+        <select name="category_id">
+            <!-- Fetch and display categories from the database -->
+            <?php
+            // Connect to database and fetch categories
+            $conn = new mysqli('localhost', 'root', '', 'LOGIN');
+            $result = $conn->query("SELECT * FROM CATEGORY");
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='".$row['category_id']."'>".$row['category_name']."</option>";
+            }
+            ?>
+        </select><br>
+
+        <label for="ingredients">Ingredients (separate by comma):</label>
+        <input type="text" name="ingredients" required><br>
+
+        <label for="steps">Steps (separate by full stop):</label>
+        <textarea name="steps" required></textarea><br>
+
+        <input type="submit" value="Add Recipe">
+    </form>
+</body>
+</html>
